@@ -8,7 +8,7 @@ import lombok.Setter;
 import java.util.Objects;
 
 @Entity
-@Table(name = "tb_tasks")
+@Table(name = "tb_task")
 public class Task {
 
 

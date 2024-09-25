@@ -18,9 +18,8 @@ public class TaskService {
         return repository.findAll();
     }
 
-    public Task findById(Long id) {
-        Optional<Task> obj = repository.findById(id);
-        return obj.get();
+    public Optional<Task> findById(Long id) {
+       return repository.findById(id);
     }
 
     public Task insert(Task obj) {
@@ -34,9 +33,8 @@ public class TaskService {
         updateData(entity, obj);
         return repository.save(entity);
     }
-
     private void updateData(Task entity, Task obj) {
-      //  entity.setDescription(obj.getDescription());
+       entity.setDescription(obj.getDescription());
 
     }
 }
